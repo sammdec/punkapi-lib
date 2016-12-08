@@ -1,20 +1,56 @@
 {
   "name": "punkapi-js",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A javascript library for interacting with the punkapi-db",
+  "main": "dist/index.js",
+  "engines": {
+    "node": ">=4"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel src -d dist",
+    "dev": "babel src -d dist -w",
+    "test": "standard --verbose | snazzy && mocha",
+    "cover": "istanbul cover _mocha",
+    "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/samjbmason/punkapi-js.git"
   },
-  "keywords": [],
+  "keywords": [
+    "puankapi",
+    "beer",
+    "craft beer",
+    "api"
+  ],
   "author": "Sam Mason <sam.jbmason@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/samjbmason/punkapi-js/issues"
   },
-  "homepage": "https://github.com/samjbmason/punkapi-js#readme"
+  "homepage": "https://github.com/samjbmason/punkapi-js#readme",
+  "dependencies": {
+    "lodash": "^4.17.2",
+    "moment": "^2.17.1",
+    "punkapi-db": "^2.1.0",
+    "unique-random-array": "^1.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
+    "coveralls": "^2.11.15",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0",
+    "mocha-lcov-reporter": "^1.2.0",
+    "should": "^11.1.1",
+    "standard": "^8.6.0"
+  },
+  "standard": {
+    "ignore": [
+      "test/**/*"
+    ]
+  }
 }
