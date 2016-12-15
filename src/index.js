@@ -15,8 +15,6 @@ exports.random = () => {
 exports.beer = (id) => {
   const chosenBeer = idFilter(id, sortedDb)
 
-  if (!chosenBeer) return false
-
   return chosenBeer
 }
 
