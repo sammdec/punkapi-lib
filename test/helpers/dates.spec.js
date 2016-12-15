@@ -8,10 +8,10 @@ describe('isDateBefore', function() {
     isDateBefore(firstDate, secondDate).should.be.true()
   })
 
-  it('should throw an error if not a real date', function () {
+  it('should return false if not a real date', function () {
     const firstDate = '16-2016'
     const secondDate = '13/2016'
-    isDateBefore.bind(null, firstDate, secondDate).should.throw()
+    isDateBefore(firstDate, secondDate).should.be.false()
   })
 })
 
@@ -22,10 +22,10 @@ describe('isDateAfter', function() {
     isDateAfter(firstDate, secondDate).should.be.true()
   })
 
-  it('should throw an error if not a real date', function () {
+  it('should return false if not a real date', function () {
     const firstDate = '16-2016'
     const secondDate = '13/2016'
 
-    isDateAfter.bind(null, firstDate, secondDate).should.throw()
+    isDateAfter(firstDate, secondDate).should.be.false()
   })
 })

@@ -1,7 +1,6 @@
 const filter = require('lodash/filter')
 const curry = require('lodash/curry')
-const isDateBefore = require('../helpers/dates').isDateBefore
-const isDateAfter = require('../helpers/dates').isDateAfter
+const { isDateBefore, isDateAfter } = require('../helpers/dates')
 
 function brewedBeforeFilter (val, db) {
   if (val == null) return db

@@ -22,8 +22,9 @@ describe('.beer()', function() {
     done()
   })
 
-  it('should return an error if id doesnt match to a beer', function (done) {
-    beer.bind(null, 10000).should.throw()
+  it('should return empty array if id doesnt match to a beer', function (done) {
+    beer(10000).should.be.a.Array()
+    beer(10000).should.be.empty()
     done()
   })
 })
@@ -87,12 +88,13 @@ describe('.beers()', function() {
     done()
   })
 
-  it('should return error if option isnt a date', function (done) {
+  it('should return empty array if option isnt a date', function (done) {
     const opts = {
       brewed_before: 'not a date'
     }
 
-    beers.bind(null, opts).should.throw()
+    beers(opts).should.be.a.Array()
+    beers(opts).should.be.empty()
     done()
   })
 
