@@ -14,7 +14,8 @@
     "dev": "babel src -d dist -w",
     "test": "standard --verbose | snazzy && mocha",
     "cover": "istanbul cover _mocha",
-    "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls"
+    "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
