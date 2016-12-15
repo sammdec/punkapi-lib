@@ -1,4 +1,4 @@
-# punkapi-lib [![Build Status](https://travis-ci.org/samjbmason/punkapi-lib.svg?branch=master)](https://travis-ci.org/samjbmason/punkapi-lib)
+# punkapi-lib [![Build Status](https://travis-ci.org/samjbmason/punkapi-lib.svg?branch=master)](https://travis-ci.org/samjbmason/punkapi-lib) [![Coverage Status](https://coveralls.io/repos/github/samjbmason/punkapi-lib/badge.svg?branch=master)](https://coveralls.io/github/samjbmason/punkapi-lib?branch=master)
 > Access the Punk API data and filters locally as a package
 
 ## Install
