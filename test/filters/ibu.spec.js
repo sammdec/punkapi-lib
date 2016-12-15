@@ -1,5 +1,5 @@
 const db = require('punkapi-db')
-const { ibuGtFilter, ibuLtFilter } = require('../../src/filters/ibu')
+const { ibuGtFilter, ibuLtFilter } = require('../../dist/filters/ibu')
 
 describe('ibuGtFilter', function() {
   it('should return Dead Pony Club if ibu is 34', function () {

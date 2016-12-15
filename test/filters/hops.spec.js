@@ -1,5 +1,5 @@
 const db = require('punkapi-db')
-const hopsFilter = require('../../src/filters/hops')
+const hopsFilter = require('../../dist/filters/hops')
 
 describe('hopsFilter', function() {
   it('should return beers with Nelson Sauvin', function () {

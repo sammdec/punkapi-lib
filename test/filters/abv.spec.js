@@ -1,5 +1,5 @@
 const db = require('punkapi-db')
-const { abvGtFilter, abvLtFilter } = require('../../src/filters/abv')
+const { abvGtFilter, abvLtFilter } = require('../../dist/filters/abv')
 
 describe('abvGtFilter', function() {
   it('should return Sink The Bismarck if abv is 40', function () {

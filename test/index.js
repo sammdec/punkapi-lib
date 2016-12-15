@@ -1,5 +1,5 @@
 const moment = require('moment')
-const { random, beer, beers } = require('../src/index')
+const { random, beer, beers } = require('../dist/index')
 const db = require('punkapi-db')
 const noOfBeers = db.length
 

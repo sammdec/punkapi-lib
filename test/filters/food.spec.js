@@ -1,5 +1,5 @@
 const db = require('punkapi-db')
-const foodFilter = require('../../src/filters/food')
+const foodFilter = require('../../dist/filters/food')
 
 describe('foodFilter', function() {
   it('should return Everday Anarchy', function () {

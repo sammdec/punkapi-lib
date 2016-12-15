@@ -1,5 +1,5 @@
 const db = require('punkapi-db')
-const yeastFilter = require('../../src/filters/yeast')
+const yeastFilter = require('../../dist/filters/yeast')
 
 describe('yeastFilter', function() {
   it('should return Sink The Bismarck', function () {

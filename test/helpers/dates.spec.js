@@ -1,4 +1,4 @@
-const { isDateBefore, isDateAfter } = require('../../src/helpers/dates')
+const { isDateBefore, isDateAfter } = require('../../dist/helpers/dates')
 
 describe('isDateBefore', function() {
   it('should be true if firstDate is before secondDate', function () {

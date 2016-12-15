@@ -1,5 +1,5 @@
 const db = require('punkapi-db')
-const idFilter = require('../../src/filters/id')
+const idFilter = require('../../dist/filters/id')
 
 describe('idFilter', function() {
   it('should return 5am Saint', function () {

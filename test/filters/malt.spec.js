@@ -1,5 +1,5 @@
 const db = require('punkapi-db')
-const maltFilter = require('../../src/filters/malt')
+const maltFilter = require('../../dist/filters/malt')
 
 describe('maltFilter', function() {
   it('should return beers with Crystal 150', function () {
