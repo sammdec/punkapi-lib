@@ -1,4 +1,5 @@
-const { stringFuzzyMatch, stringMatch } = require('../../dist/helpers/stringMatch')
+const stringFuzzyMatch = require('../../dist/helpers/stringMatch').stringFuzzyMatch
+const stringMatch = require('../../dist/helpers/stringMatch').stringMatch
 
 describe('stringFuzzyMatch', function() {
   it('should return true if firstString matches secondString', function () {
