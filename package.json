@@ -1,5 +1,5 @@
 {
-  "name": "punkapi-js",
+  "name": "punkapi-lib",
   "version": "1.0.0",
   "description": "A javascript library for interacting with the punkapi-db",
   "main": "dist/index.js",
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/samjbmason/punkapi-js.git"
+    "url": "git+https://github.com/samjbmason/punkapi-lib.git"
   },
   "keywords": [
     "puankapi",
@@ -29,9 +29,9 @@
   "author": "Sam Mason <sam.jbmason@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/samjbmason/punkapi-js/issues"
+    "url": "https://github.com/samjbmason/punkapi-lib/issues"
   },
-  "homepage": "https://github.com/samjbmason/punkapi-js#readme",
+  "homepage": "https://github.com/samjbmason/punkapi-lib#readme",
   "dependencies": {
     "lodash": "^4.17.2",
     "moment": "^2.17.1",
