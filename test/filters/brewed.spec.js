@@ -1,5 +1,6 @@
 const db = require('punkapi-db')
-const { brewedBeforeFilter, brewedAfterFilter } = require('../../dist/filters/brewed')
+const brewedBeforeFilter = require('../../dist/filters/brewed').brewedBeforeFilter
+const brewedAfterFilter = require('../../dist/filters/brewed').brewedAfterFilter
 
 describe('brewedBeforeFilter', function() {
   it('should return Punk IPA 2010 if date is 11-2010', function () {

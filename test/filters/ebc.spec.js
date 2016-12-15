@@ -1,5 +1,6 @@
 const db = require('punkapi-db')
-const { ebcGtFilter, ebcLtFilter } = require('../../dist/filters/ebc')
+const ebcGtFilter = require('../../dist/filters/ebc').ebcGtFilter
+const ebcLtFilter = require('../../dist/filters/ebc').ebcLtFilter
 
 describe('ebcGtFilter', function() {
   it('should return Sink The Bismarck if ebc is 39', function () {
