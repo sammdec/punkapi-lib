@@ -4,7 +4,7 @@
   "description": "A javascript library for interacting with the punkapi-db",
   "main": "./dist/index.js",
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=4.0.0"
   },
   "files": [
     "dist"
