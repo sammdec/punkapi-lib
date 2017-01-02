@@ -36,7 +36,7 @@
   "dependencies": {
     "lodash": "^4.17.2",
     "moment": "^2.17.1",
-    "punkapi-db": "^2.1.0",
+    "punkapi-db": "^2.2.0",
     "unique-random-array": "^1.0.0"
   },
   "devDependencies": {
