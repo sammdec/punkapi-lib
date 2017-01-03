@@ -10,6 +10,7 @@ const foodFilter = require('./food')
 const hopsFilter = require('./hops')
 const maltFilter = require('./malt')
 const yeastFilter = require('./yeast')
+const idsFilter = require('./ids')
 
 function filters (db, opts) {
   const {
@@ -25,7 +26,8 @@ function filters (db, opts) {
     brewed_after,
     hops,
     malt,
-    food
+    food,
+    ids
   } = opts
 
   return pipe(
@@ -41,7 +43,8 @@ function filters (db, opts) {
     foodFilter(food),
     hopsFilter(hops),
     maltFilter(malt),
-    yeastFilter(yeast)
+    yeastFilter(yeast),
+    idsFilter(ids)
   )(db)
 }
 

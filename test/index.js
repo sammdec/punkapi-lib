@@ -173,4 +173,15 @@ describe('.beers()', function() {
     beers(opts)[0].ingredients.yeast.should.match(/Wyeast 1056/i)
     done()
   })
+
+  it('should return beers with ids of 1,4,29', function (done) {
+    const opts = {
+      ids: '1|4|29'
+    }
+    beers(opts).should.be.a.Array()
+    beers(opts)[0].id.should.be.equal(1)
+    beers(opts)[1].id.should.be.equal(4)
+    beers(opts)[2].id.should.be.equal(29)
+    done()
+  })
 })
