@@ -108,6 +108,11 @@ Will return beers which match the name of the malt of the string passed in (we u
 Type: `string`
 Will return beers which match the name of the yeast of the string passed in (we use fuzzy matching to find the yeast names).
 
+##### ids
+Type: `string`
+Pattern: `id|id|id`
+Will return beers which match the given ids, ids should be separated by a pipe symbol.
+
 
 ```
 const options = {
