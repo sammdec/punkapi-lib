@@ -55,79 +55,62 @@ Get beers that match the passed in options, if no options are passed in it will 
 **Options**
 
 ##### abv_gt
-Type: `number`
-
+Type: `number`  
 Will return beers with an abv greater than the passed in amount.
 
 ##### abv_lt
-Type: `number`
-
+Type: `number`  
 Will return beers with an abv less than the passed in amount.
 
 ##### beer_name
-Type: `string`
-
+Type: `string`  
 Will return beers matching the string passed in (we use fuzzy matching to find the names).
 
 ##### brewed_before
-Type: `string`
-
-Pattern: `MM-YYYY`
-
+Type: `string`  
+Pattern: `MM-YYYY`  
 Will return beers brewed before the passed in date.
 
 ##### brewed_after
-Type: `string`
-
-Pattern: `MM-YYYY`
-
+Type: `string`  
+Pattern: `MM-YYYY`  
 Will return beers brewed after the passed in date.
 
 ##### ebc_gt
-Type: `number`
-
+Type: `number`   
 Will return beers with an ebc greater than the passed in amount.
 
 ##### ebc_lt
-Type: `number`
-
+Type: `number`  
 Will return beers with an ebc less than the passed in amount.
 
 ##### food
-Type: `string`
-
+Type: `string`  
 Will return beers which match food pairings of the string passed in (we use fuzzy matching to find the foods).
 
 ##### hops
-Type: `string`
-
+Type: `string`  
 Will return beers which match the name of the hops of the string passed in (we use fuzzy matching to find the hop names).
 
 ##### ibu_gt
-Type: `number`
-
+Type: `number`  
 Will return beers with an ibu greater than the passed in amount.
 
 ##### ibu_lt
-Type: `number`
-
+Type: `number`  
 Will return beers with an ibu less than the passed in amount.
 
 ##### malt
-Type: `string`
-
+Type: `string`  
 Will return beers which match the name of the malt of the string passed in (we use fuzzy matching to find the malt names).
 
 ##### yeast
-Type: `string`
-
+Type: `string`  
 Will return beers which match the name of the yeast of the string passed in (we use fuzzy matching to find the yeast names).
 
 ##### ids
-Type: `string`
-
-Pattern: `id|id|id`
-
+Type: `string`  
+Pattern: `id|id|id`  
 Will return beers which match the given ids, ids should be separated by a pipe symbol.
 
 
