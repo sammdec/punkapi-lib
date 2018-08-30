@@ -1,12 +1,10 @@
-const filter = require('lodash/filter')
-const includes = require('lodash/includes')
-const curry = require('lodash/curry')
+import filter from "lodash/filter"
+import curry from "lodash/curry"
+import includes from "lodash/includes"
 
-function idsFilter (val, db) {
+export default curry((val, db) => {
   if (val == null) return db
 
-  const idArray = val.split('|').map(Number)
-  return filter(db, (b) => includes(idArray, b.id))
-}
-
-module.exports = curry(idsFilter)
+  const idArray = val.split("|").map(Number)
+  return filter(db, b => includes(idArray, b.id))
+})

@@ -1,23 +1,21 @@
-const db = require('punkapi-db')
-const uniqueRandomArray = require('unique-random-array')
-const sortBy = require('lodash/sortBy')
-const filters = require('./filters')
-const idFilter = require('./filters/id')
+import db from "punkapi-db"
+import sortBy from "lodash/sortBy"
+import filters from "./filters"
+import idFilter from "./filters/id"
 
-const sortedDb = sortBy(db, ['id'])
+const sortedDb = sortBy(db, ["id"])
 
-exports.random = () => {
-  const randomBeer = uniqueRandomArray(sortedDb)
-
-  return [randomBeer()]
+export const random = () => {
+  const randomBeer = sortedDb[Math.floor(Math.random() * sortedDb.length)]
+  return [randomBeer]
 }
 
-exports.beer = (id) => {
+export const beer = id => {
   const chosenBeer = idFilter(id, sortedDb)
 
   return chosenBeer
 }
 
-exports.beers = (options = {}) => {
+export const beers = (options = {}) => {
   return filters(sortedDb, options)
 }

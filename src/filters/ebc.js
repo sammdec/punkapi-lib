@@ -1,15 +1,12 @@
-const filter = require('lodash/filter')
-const curry = require('lodash/curry')
+import filter from "lodash/filter"
+import curry from "lodash/curry"
 
-function ebcGtFilter (val, db) {
+export const ebcGtFilter = curry((val, db) => {
   if (val == null) return db
-  return filter(db, (b) => b.ebc > val)
-}
+  return filter(db, b => b.ebc > val)
+})
 
-function ebcLtFilter (val, db) {
+export const ebcLtFilter = curry((val, db) => {
   if (val == null) return db
-  return filter(db, (b) => b.ebc < val)
-}
-
-exports.ebcGtFilter = curry(ebcGtFilter)
-exports.ebcLtFilter = curry(ebcLtFilter)
+  return filter(db, b => b.ebc < val)
+})

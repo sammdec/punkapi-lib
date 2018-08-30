@@ -1,16 +1,13 @@
-const filter = require('lodash/filter')
-const curry = require('lodash/curry')
-const { isDateBefore, isDateAfter } = require('../helpers/dates')
+import filter from "lodash/filter"
+import curry from "lodash/curry"
+import { isDateBefore, isDateAfter } from "../helpers/dates"
 
-function brewedBeforeFilter (val, db) {
+export const brewedBeforeFilter = curry((val, db) => {
   if (val == null) return db
-  return filter(db, (b) => isDateBefore(b.first_brewed, val))
-}
+  return filter(db, b => isDateBefore(b.first_brewed, val))
+})
 
-function brewedAfterFilter (val, db) {
+export const brewedAfterFilter = curry((val, db) => {
   if (val == null) return db
-  return filter(db, (b) => isDateAfter(b.first_brewed, val))
-}
-
-exports.brewedBeforeFilter = curry(brewedBeforeFilter)
-exports.brewedAfterFilter = curry(brewedAfterFilter)
+  return filter(db, b => isDateAfter(b.first_brewed, val))
+})

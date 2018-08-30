@@ -1,12 +1,16 @@
-const db = require('punkapi-db')
-const beerNameFilter = require('../../dist/filters/beerName')
+import db from "punkapi-db"
+import beerNameFilter from "../../src/filters/beerName"
 
-describe('beerNameFilter', function() {
-  it('should return Sink The Bismarck', function () {
-    beerNameFilter('Sink The', db).should.containDeep([{name: 'Sink The Bismarck!'}])
+describe("beerNameFilter", function() {
+  it("should return Sink The Bismarck", function() {
+    expect(beerNameFilter("Sink The", db)[0]).toMatchObject({
+      name: "Sink The Bismarck!"
+    })
   })
 
-  it('should not return Dead Pony Club', function () {
-    beerNameFilter('Sink The', db).should.not.containDeep([{name: 'Dead Pony Club'}])
+  it("should not return Dead Pony Club", function() {
+    expect(beerNameFilter("Sink The", db)[0]).not.toMatchObject({
+      name: "Dead Pony Club"
+    })
   })
 })

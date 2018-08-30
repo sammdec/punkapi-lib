@@ -1,22 +1,19 @@
-const moment = require('moment')
+import { DateTime } from "luxon"
 
-const isDateBefore = (brewDate, predicate) => {
-  const parsedBrewDate = moment(brewDate, 'MM/YYYY')
-  const parsedPredicate = moment(predicate, 'MM-YYYY')
+export const isDateBefore = (brewDate, predicate) => {
+  const parsedBrewDate = DateTime.fromFormat(brewDate, "MM/yyyy")
+  const parsedPredicate = DateTime.fromFormat(predicate, "MM-yyyy")
 
-  if (!parsedPredicate.isValid()) return false
+  if (!parsedPredicate.isValid) return false
 
-  return parsedBrewDate.isBefore(parsedPredicate)
+  return parsedBrewDate < parsedPredicate
 }
 
-const isDateAfter = (brewDate, predicate) => {
-  const parsedBrewDate = moment(brewDate, 'MM/YYYY')
-  const parsedPredicate = moment(predicate, 'MM-YYYY')
+export const isDateAfter = (brewDate, predicate) => {
+  const parsedBrewDate = DateTime.fromFormat(brewDate, "MM/yyyy")
+  const parsedPredicate = DateTime.fromFormat(predicate, "MM-yyyy")
 
-  if (!parsedPredicate.isValid()) return false
+  if (!parsedPredicate.isValid) return false
 
-  return parsedBrewDate.isAfter(parsedPredicate)
+  return parsedBrewDate > parsedPredicate
 }
-
-exports.isDateAfter = isDateAfter
-exports.isDateBefore = isDateBefore

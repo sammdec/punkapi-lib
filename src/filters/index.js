@@ -1,18 +1,18 @@
-const pipe = require('lodash/fp/flow')
+import pipe from "lodash/fp/flow"
 
 // Filters
-const { abvGtFilter, abvLtFilter } = require('./abv')
-const { ebcGtFilter, ebcLtFilter } = require('./ebc')
-const { ibuGtFilter, ibuLtFilter } = require('./ibu')
-const { brewedBeforeFilter, brewedAfterFilter } = require('./brewed')
-const beerNameFilter = require('./beerName')
-const foodFilter = require('./food')
-const hopsFilter = require('./hops')
-const maltFilter = require('./malt')
-const yeastFilter = require('./yeast')
-const idsFilter = require('./ids')
+import { abvGtFilter, abvLtFilter } from "./abv"
+import { ebcGtFilter, ebcLtFilter } from "./ebc"
+import { ibuGtFilter, ibuLtFilter } from "./ibu"
+import { brewedBeforeFilter, brewedAfterFilter } from "./brewed"
+import beerNameFilter from "./beerName"
+import foodFilter from "./food"
+import hopsFilter from "./hops"
+import maltFilter from "./malt"
+import yeastFilter from "./yeast"
+import idsFilter from "./ids"
 
-function filters (db, opts) {
+export default (db, opts) => {
   const {
     abv_gt,
     abv_lt,
@@ -47,5 +47,3 @@ function filters (db, opts) {
     idsFilter(ids)
   )(db)
 }
-
-module.exports = filters

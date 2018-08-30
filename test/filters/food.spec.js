@@ -1,12 +1,16 @@
-const db = require('punkapi-db')
-const foodFilter = require('../../dist/filters/food')
+import db from "punkapi-db"
+import foodFilter from "../../src/filters/food"
 
-describe('foodFilter', function() {
-  it('should return Everday Anarchy', function () {
-    foodFilter('Spiced carrot', db).should.containDeep([{name: 'Everday Anarchy'}])
+describe("foodFilter", function() {
+  it("should return Everday Anarchy", function() {
+    expect(foodFilter("Spiced carrot", db)).toContainEqual(
+      expect.objectContaining({ name: "Everday Anarchy" })
+    )
   })
 
-  it('should not return Challenger', function () {
-    foodFilter('Spiced carrot', db).should.not.containDeep([{name: 'Challenger'}])
+  it("should not return Challenger", function() {
+    expect(foodFilter("Spiced carrot", db)).not.toContainEqual(
+      expect.objectContaining({ name: "Challenger" })
+    )
   })
 })

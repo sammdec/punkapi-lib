@@ -1,9 +1,7 @@
-const filter = require('lodash/filter')
-const curry = require('lodash/curry')
+import filter from "lodash/filter"
+import curry from "lodash/curry"
 
-function idFilter (val, db) {
+export default curry((val, db) => {
   if (val == null) return false
-  return filter(db, (b) => b.id === val)
-}
-
-module.exports = curry(idFilter)
+  return filter(db, b => b.id === val)
+})

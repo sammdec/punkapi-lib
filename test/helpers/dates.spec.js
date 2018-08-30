@@ -1,31 +1,30 @@
-const isDateBefore = require('../../dist/helpers/dates').isDateBefore
-const isDateAfter = require('../../dist/helpers/dates').isDateAfter
+import { isDateBefore, isDateAfter } from "../../src/helpers/dates"
 
-describe('isDateBefore', function() {
-  it('should be true if firstDate is before secondDate', function () {
-    const firstDate = '10/16'
-    const secondDate = '12-16'
-    isDateBefore(firstDate, secondDate).should.be.true()
+describe("isDateBefore", function() {
+  it("should be true if firstDate is before secondDate", function() {
+    const firstDate = "10/2016"
+    const secondDate = "12-2016"
+    expect(isDateBefore(firstDate, secondDate)).toEqual(true)
   })
 
-  it('should return false if not a real date', function () {
-    const firstDate = '16-2016'
-    const secondDate = '13/2016'
-    isDateBefore(firstDate, secondDate).should.be.false()
+  it("should return false if not a real date", function() {
+    const firstDate = "16-2016"
+    const secondDate = "13/2016"
+    expect(isDateBefore(firstDate, secondDate)).toEqual(false)
   })
 })
 
-describe('isDateAfter', function() {
-  it('should be true if firstDate is before secondDate', function () {
-    const firstDate = '11/16'
-    const secondDate = '10-16'
-    isDateAfter(firstDate, secondDate).should.be.true()
+describe("isDateAfter", function() {
+  it("should be true if firstDate is after secondDate", function() {
+    const firstDate = "11/2016"
+    const secondDate = "10-2016"
+    expect(isDateAfter(firstDate, secondDate)).toEqual(true)
   })
 
-  it('should return false if not a real date', function () {
-    const firstDate = '16-2016'
-    const secondDate = '13/2016'
+  it("should return false if not a real date", function() {
+    const firstDate = "16-2016"
+    const secondDate = "13/2016"
 
-    isDateAfter(firstDate, secondDate).should.be.false()
+    expect(isDateAfter(firstDate, secondDate)).toEqual(false)
   })
 })

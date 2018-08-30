@@ -1,13 +1,11 @@
-const filter = require('lodash/filter')
-const curry = require('lodash/curry')
+import filter from "lodash/filter"
+import curry from "lodash/curry"
 
-const { stringMatch } = require('../helpers/stringMatch')
+import { stringMatch } from "../helpers/stringMatch"
 
-function foodFilter (val, db) {
+export default curry((val, db) => {
   if (val == null) return db
-  return filter(db, (b) => {
-    return b.food_pairing.some((o) => stringMatch(o, val))
+  return filter(db, b => {
+    return b.food_pairing.some(o => stringMatch(o, val))
   })
-}
-
-module.exports = curry(foodFilter)
+})

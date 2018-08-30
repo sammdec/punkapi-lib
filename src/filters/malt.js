@@ -1,12 +1,10 @@
-const filter = require('lodash/filter')
-const curry = require('lodash/curry')
-const { stringFuzzyMatch } = require('../helpers/stringMatch')
+import filter from "lodash/filter"
+import curry from "lodash/curry"
+import { stringFuzzyMatch } from "../helpers/stringMatch"
 
-function maltFilter (val, db) {
+export default curry((val, db) => {
   if (val == null) return db
-  return filter(db, (b) => {
-    return b.ingredients.malt.some((o) => stringFuzzyMatch(o.name, val))
+  return filter(db, b => {
+    return b.ingredients.malt.some(o => stringFuzzyMatch(o.name, val))
   })
-}
-
-module.exports = curry(maltFilter)
+})
