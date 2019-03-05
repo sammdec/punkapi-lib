@@ -1,18 +1,18 @@
-const pipe = require('lodash/fp/flow')
+const pipe = require("lodash/fp/flow")
 
 // Filters
-const { abvGtFilter, abvLtFilter } = require('./abv')
-const { ebcGtFilter, ebcLtFilter } = require('./ebc')
-const { ibuGtFilter, ibuLtFilter } = require('./ibu')
-const { brewedBeforeFilter, brewedAfterFilter } = require('./brewed')
-const beerNameFilter = require('./beerName')
-const foodFilter = require('./food')
-const hopsFilter = require('./hops')
-const maltFilter = require('./malt')
-const yeastFilter = require('./yeast')
-const idsFilter = require('./ids')
+const { abvGtFilter, abvLtFilter } = require("./abv")
+const { ebcGtFilter, ebcLtFilter } = require("./ebc")
+const { ibuGtFilter, ibuLtFilter } = require("./ibu")
+const { brewedBeforeFilter, brewedAfterFilter } = require("./brewed")
+const beerNameFilter = require("./beerName")
+const foodFilter = require("./food")
+const hopsFilter = require("./hops")
+const maltFilter = require("./malt")
+const yeastFilter = require("./yeast")
+const idsFilter = require("./ids")
 
-function filters (db, opts) {
+function filters(db, opts) {
   const {
     abv_gt,
     abv_lt,

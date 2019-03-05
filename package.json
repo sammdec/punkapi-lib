@@ -12,7 +12,7 @@
   "scripts": {
     "build": "babel src -d dist",
     "dev": "babel src -d dist -w",
-    "test": "npm run build & standard --verbose | snazzy && mocha",
+    "test": "npm run build & mocha",
     "cover": "istanbul cover _mocha",
     "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls",
     "prepublish": "npm run build"
@@ -34,25 +34,19 @@
   },
   "homepage": "https://github.com/samjbmason/punkapi-lib#readme",
   "dependencies": {
-    "lodash": "^4.17.2",
-    "moment": "^2.17.1",
-    "punkapi-db": "^2.2.2",
-    "unique-random-array": "^1.0.0"
+    "lodash": "^4.17.11",
+    "moment": "^2.24.0",
+    "punkapi-db": "^2.4.0",
+    "unique-random-array": "^1.0.1"
   },
   "devDependencies": {
-    "babel-cli": "^6.18.0",
-    "babel-preset-es2015": "^6.18.0",
-    "coveralls": "^2.11.15",
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "coveralls": "^3.0.3",
     "istanbul": "^0.4.5",
-    "mocha": "^3.2.0",
-    "mocha-lcov-reporter": "^1.2.0",
-    "should": "^11.1.1",
-    "snazzy": "^5.0.0",
-    "standard": "^8.6.0"
-  },
-  "standard": {
-    "ignore": [
-      "test/**/*"
-    ]
+    "mocha": "^6.0.2",
+    "mocha-lcov-reporter": "^1.3.0",
+    "should": "^13.2.3"
   }
 }

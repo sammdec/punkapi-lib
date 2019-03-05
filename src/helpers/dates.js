@@ -1,8 +1,8 @@
-const moment = require('moment')
+const moment = require("moment")
 
 const isDateBefore = (brewDate, predicate) => {
-  const parsedBrewDate = moment(brewDate, 'MM/YYYY')
-  const parsedPredicate = moment(predicate, 'MM-YYYY')
+  const parsedBrewDate = moment(brewDate, "MM/YYYY")
+  const parsedPredicate = moment(predicate, "MM-YYYY")
 
   if (!parsedPredicate.isValid()) return false
 
@@ -10,8 +10,8 @@ const isDateBefore = (brewDate, predicate) => {
 }
 
 const isDateAfter = (brewDate, predicate) => {
-  const parsedBrewDate = moment(brewDate, 'MM/YYYY')
-  const parsedPredicate = moment(predicate, 'MM-YYYY')
+  const parsedBrewDate = moment(brewDate, "MM/YYYY")
+  const parsedPredicate = moment(predicate, "MM-YYYY")
 
   if (!parsedPredicate.isValid()) return false
 
