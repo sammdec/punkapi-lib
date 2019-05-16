@@ -1,6 +1,6 @@
 {
   "name": "punkapi-lib",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "description": "A javascript library for interacting with the punkapi-db",
   "main": "./dist/index.js",
   "engines": {
@@ -36,13 +36,13 @@
   "dependencies": {
     "lodash": "^4.17.11",
     "moment": "^2.24.0",
-    "punkapi-db": "^2.4.0",
+    "punkapi-db": "^2.5.0",
     "unique-random-array": "^1.0.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.2.3",
-    "@babel/core": "^7.3.4",
-    "@babel/preset-env": "^7.3.4",
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
     "coveralls": "^3.0.3",
     "istanbul": "^0.4.5",
     "mocha": "^6.0.2",
