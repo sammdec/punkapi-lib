@@ -1,3 +1,5 @@
+# Deprecated: This repo's functionality will be mved to the main [punkapi](https://github.com/samjbmason/punkapi-db/) monorepo from now on
+
 # punkapi-lib [![Build Status](https://travis-ci.org/samjbmason/punkapi-lib.svg?branch=master)](https://travis-ci.org/samjbmason/punkapi-lib) [![Coverage Status](https://coveralls.io/repos/github/samjbmason/punkapi-lib/badge.svg?branch=master)](https://coveralls.io/github/samjbmason/punkapi-lib?branch=master)
 > Access the Punk API data and filters locally as a package
 
